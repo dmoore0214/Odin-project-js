@@ -22,13 +22,13 @@ function playGame(computerSelection, playerSelection){
 }
 
 function gameTo5(){
-    
-    for(i=0; i< 5; i++){
-        let playerSelection = prompt("Rock, paper or scissors");
+    for(i=0; i< 5; i++){ 
+        let playerSelection=prompt("Rock, paper, scissors");
         console.log("You chose: " + playerSelection.toLowerCase());
         let computerSelection = getComputerChoice(choices);
-        console.log("Computer Chose: " + computerSelection)
+        console.log("Computer Chose: " + computerSelection);
         playGame(computerSelection, playerSelection)
+    }
        if (playerScore > computerScore){
         return "You Win";
        } else if (playerScore < computerScore){
@@ -37,7 +37,7 @@ function gameTo5(){
         return "You both win"
        }
     }
-}
+
 
 console.log(gameTo5());
 console.log("Your score was " + playerScore + "Computer score was "+ computerScore)
